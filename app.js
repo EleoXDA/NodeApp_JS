@@ -1,4 +1,4 @@
-// const fs = require('fs'); // one of Node.JS's modules for file system functionality
+const fs = require('fs');
 const http = require('http');
 
 // console.log('Hello from Node.JS')
@@ -25,6 +25,12 @@ const server = http.createServer((req, res) => {
     );
     res.write('</html>');
     return res.end(); //we need to write return so that the rest of the commands dont execute after res.end()
+  }
+  if (url === '/message' && method === 'POST') {
+    fs.writeFileSync('message.text', 'DUMMY');
+    res.statusCode = 302;
+    res.setHeader('Location', '/');
+    return res.end();
   }
   console.log(req.url, req.method, req.headers);
   res.setHeader('Content-Type', 'text/html');
