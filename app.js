@@ -18,4 +18,4 @@ const server = http.createServer((req,res) => {
   console.log(req)
 });
 
-server.listen();
+server.listen(3000);
