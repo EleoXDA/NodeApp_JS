@@ -33,14 +33,15 @@ const server = http.createServer((req, res) => {
       console.log(chunk);
       body.push(chunk);
     });
-    req.on('end', () => {
+    return req.on('end', () => {
       const parsedBody = Buffer.concat(body).toString();
       const message = parsedBody.split('=')[1];
-      fs.writeFileSync('message.text', message);
+      fs.writeFile('message.text', message, (err) => {/*we need to make it async so that other incoming events can be handled*/
+        res.statusCode = 302;
+        res.setHeader('Location', '/');
+        return res.end();
+      }); 
     });
-    res.statusCode = 302;
-    res.setHeader('Location', '/');
-    return res.end();
   }
   // console.log(req.url, req.method, req.headers);
   res.setHeader('Content-Type', 'text/html');
