@@ -18,7 +18,7 @@ const server = http.createServer((req, res) => {
   const url = req.url;
   const method = req.method;
   if (url === '/') {
-    res.setHeader('Content-Type', 'text/html');
+    // res.setHeader('Content-Type', 'text/html');
     res.write('<html>');
     res.write('<head><title>My First Page</title></head>');
     res.write(
@@ -42,7 +42,7 @@ const server = http.createServer((req, res) => {
     res.setHeader('Location', '/');
     return res.end();
   }
-  console.log(req.url, req.method, req.headers);
+  // console.log(req.url, req.method, req.headers);
   res.setHeader('Content-Type', 'text/html');
   res.write('<html>');
   res.write('<head><title>My First Page</title></head>');
