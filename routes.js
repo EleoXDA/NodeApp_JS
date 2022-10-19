@@ -39,4 +39,15 @@ const requestHandler = (req,res) => {
   res.end(); //we need to end the response; any text after this will end up in an error
 };
 
-module.exports = requestHandler;
+// module.exports = requestHandler;
+
+// module.exports = {
+//     handler: requestHandler,
+//     someText: 'Some hard coded text'
+// };
+
+// module.exports.handler = requestHandler;
+// module.exports.someText = 'Some text';
+
+exports.handler = requestHandler;
+exports.someText = 'Some hard coded text';
