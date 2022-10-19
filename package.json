@@ -1,0 +1,25 @@
+{
+  "name": "node_js",
+  "version": "1.0.0",
+  "description": "Complete Node.JS Guide",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EleoXDA/NodeApp.git"
+  },
+  "keywords": [
+    "node",
+    "javascript",
+    "nodejs",
+    "node-js"
+  ],
+  "author": "EleoXDA",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EleoXDA/NodeApp/issues"
+  },
+  "homepage": "https://github.com/EleoXDA/NodeApp#readme"
+}
