@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/EleoXDA/NodeApp/issues"
   },
-  "homepage": "https://github.com/EleoXDA/NodeApp#readme"
+  "homepage": "https://github.com/EleoXDA/NodeApp#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
 }
